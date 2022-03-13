@@ -1,24 +1,26 @@
-cc = gcc -Wall -Wno-unused-variable
-#-std=c11 -ggdb
+cc = gcc
+flags = -Wall -O0
 
-all: static clean
-
-#main:
-#	gcc -c main.c
-# -L -liblibrary -o main
-#	gcc main.c -L. -Wl,-rpath=. -llibrary -o main
+all: static shared clean
 
 static:
-	make -C ../zad1 static
-#	$(cc) -c library.c
-#	ar rcs liblibrary.a library.o
+	$(cc) $(flags) -c ../zad1/library.c
+	ar rcs liblibrary.a library.o
+	$(flags) -o main ../zad2/main.c lib.a
 
-#shared:
-#	$(cc) -c -fPIC library.c
-#	$(cc) -shared -fPIC -o library.so library.o
+shared:
+	$(cc) $(flags) -c -fPIC ../zad1/library.c
+	$(cc) $(flags) -shared -fPIC -o library.so library.o
+	$(cc) -o main main.c -L. library.so -Wl,-rpath=`pwd`
 
 clean:
-	rm -f *.o *.so *.a
+	rm -f *.o *.so *.a main
 
+test_static:
+	make clean
+	make static
 
+test_shared:
+	make clean
+	make shared
 

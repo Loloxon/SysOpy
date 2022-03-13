@@ -72,11 +72,11 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_lab1: phony || CMakeFiles/lab1.dir
 
-build CMakeFiles/lab1.dir/zad1/main.c.o: C_COMPILER__lab1_Debug /home/loloxon/Pulpit/SysOpy/lab1/zad1/main.c || cmake_object_order_depends_target_lab1
-  DEP_FILE = CMakeFiles/lab1.dir/zad1/main.c.o.d
+build CMakeFiles/lab1.dir/zad2/main.c.o: C_COMPILER__lab1_Debug /home/loloxon/Pulpit/SysOpy/lab1/zad2/main.c || cmake_object_order_depends_target_lab1
+  DEP_FILE = CMakeFiles/lab1.dir/zad2/main.c.o.d
   FLAGS = -g -std=gnu99
   OBJECT_DIR = CMakeFiles/lab1.dir
-  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/zad1
+  OBJECT_FILE_DIR = CMakeFiles/lab1.dir/zad2
 
 build CMakeFiles/lab1.dir/zad1/library.c.o: C_COMPILER__lab1_Debug /home/loloxon/Pulpit/SysOpy/lab1/zad1/library.c || cmake_object_order_depends_target_lab1
   DEP_FILE = CMakeFiles/lab1.dir/zad1/library.c.o.d
@@ -92,7 +92,7 @@ build CMakeFiles/lab1.dir/zad1/library.c.o: C_COMPILER__lab1_Debug /home/loloxon
 #############################################
 # Link the executable lab1
 
-build lab1: C_EXECUTABLE_LINKER__lab1_Debug CMakeFiles/lab1.dir/zad1/main.c.o CMakeFiles/lab1.dir/zad1/library.c.o
+build lab1: C_EXECUTABLE_LINKER__lab1_Debug CMakeFiles/lab1.dir/zad2/main.c.o CMakeFiles/lab1.dir/zad1/library.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/lab1.dir
   POST_BUILD = :

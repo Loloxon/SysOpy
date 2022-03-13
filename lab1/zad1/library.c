@@ -10,7 +10,7 @@
 char* path = "/tmp/tmp.txt";
 
 blockTable *createPointersTable(int size){ //zarezerwowanie miejsca
-    blockTable* table = calloc(1,sizeof(struct blockTable));
+    blockTable* table = calloc(1,sizeof(blockTable));
     table->size = size;
     table->info = calloc(size, sizeof(char*));
 //    for(int i=0;i<size;i++) {
