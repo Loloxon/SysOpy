@@ -6,11 +6,11 @@
 #include <sys/stat.h>
 
 
-blockTable* table = NULL;
+//struct blockTable* table = NULL;
 char* path = "/tmp/tmp.txt";
 
-blockTable* createPointersTable(int size){ //zarezerwowanie miejsca
-    table = calloc(1,sizeof(blockTable));
+blockTable *createPointersTable(int size){ //zarezerwowanie miejsca
+    blockTable* table = calloc(1,sizeof(struct blockTable));
     table->size = size;
     table->info = calloc(size, sizeof(char*));
 //    for(int i=0;i<size;i++) {
@@ -19,7 +19,7 @@ blockTable* createPointersTable(int size){ //zarezerwowanie miejsca
     return table;
 }
 
-int countLinesWordsChars(char* filePath[], int s) {//wc dla zadanych plików
+int countLinesWordsChars(char* filePath[], int s, blockTable* table) {//wc dla zadanych plików
     unsigned long len = 0;
     for (int i=0; i<s; i++) {
         len += strlen(filePath[i])+1;
@@ -61,13 +61,14 @@ int countLinesWordsChars(char* filePath[], int s) {//wc dla zadanych plików
 
     fread(table->info[i],1, size,tmp);
     fclose(tmp);
+//    printf("%s \n",table->info[i]);
     return i;
 }
 
 void saveToBlock(){
 }
 
-void freeMem(int index){
+void freeMem(int index, blockTable* table){
     free(table->info[index]);
     table->info[index]=NULL;
 }
