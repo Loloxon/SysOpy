@@ -1,0 +1,1 @@
+cc = gcc -Wall -std=c11 -g
