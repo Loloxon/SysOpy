@@ -1,6 +1,6 @@
 cc = gcc -Wall -std=c11 -ggdb
 
-all: static shared clean
+all: static shared
 
 static:
 	$(cc) -c library.c
@@ -11,7 +11,7 @@ shared:
 	$(cc) -shared -fPIC -o library.so library.o
 
 clean:
-	rm -f *.o *.so *.a
+	rm -f *.o *.so *.a *.txt
 
 
 

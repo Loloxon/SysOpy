@@ -1,0 +1,1 @@
+../zad2/tests/small_1 ../zad2/tests/small_2 ../zad2/tests/small_3
