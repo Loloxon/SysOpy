@@ -19,7 +19,7 @@ int wc(char* filePath[], int s, blockTable* table) {//wc dla zadanych plików
     for (int i=0; i<s; i++) {
         len += strlen(filePath[i])+1;
     }
-    char* command = calloc(len+100, sizeof (char));
+    char* command = calloc(len+s+50, sizeof (char));
     strcat(command, "wc ");
     for (int i=0; i<s; i++) {
         strcat(command, filePath[i]);
@@ -35,32 +35,31 @@ int wc(char* filePath[], int s, blockTable* table) {//wc dla zadanych plików
             break;
         }
         if(i==table->size-1){
-            printf("no more free space");
-            return -1;
+            printf("no more free space\n");
+            exit(112);
         }
     }
     FILE* tmp = fopen(path,"rb");
-
     if(!tmp) {
-        fprintf(stderr,"BIG ERROR\n");
+        fprintf(stderr,"BIG ERROR while opening tmp file\n");
     }
     fseek(tmp, 0, SEEK_END);
     long size = ftell(tmp);
+    fseek(tmp, 0, SEEK_SET);
     rewind(tmp);
-
     table->info[i] = calloc(size+10,sizeof(char));
 
-    fread(table->info[i],1, size,tmp);
+    fread(table->info[i],sizeof(char), size+5,tmp);
     fclose(tmp);
     return i;
 }
 
-void freeMem(int index, blockTable* table){
+void removeBlock(int index, blockTable* table){
     free(table->info[index]);
     table->info[index]=NULL;
 }
 
-void freeTable(blockTable* table){
+void removeTable(blockTable* table){
     for(int i=0;i<table->size;i++)
         if(table->info[i]!=NULL)
             free(table->info[i]);

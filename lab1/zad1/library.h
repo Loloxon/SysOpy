@@ -10,7 +10,7 @@ typedef struct blockTable{
 
 blockTable* createPointersTable(int size);
 int wc(char* filePath[], int s, blockTable* table);
-void freeMem(int index, blockTable* table);
-void freeTable(blockTable* table);
+void removeBlock(int index, blockTable* table);
+void removeTable(blockTable* table);
 
 #endif //SYSOPY_LIBRARY_H

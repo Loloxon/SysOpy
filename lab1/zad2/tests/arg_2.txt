@@ -2,8 +2,8 @@ stimer
 create_table 100
 etimer 100_slotow
 stimer
-wc_files ./files/big_1 ./files/big_1 ./files/big_1 
-wc_files ./files/big_1 ./files/big_3 ./files/big_3
-wc_files ./files/big_3 ./files/big_2 ./files/big_2 ./files/big_2
+wc_files ./tests/big_1 ./tests/big_1 ./tests/big_1
+wc_files ./tests/big_1 ./tests/big_3 ./tests/big_3
+wc_files ./tests/big_3 ./tests/big_2 ./tests/big_2 ./tests/big_2
 etimer loading_10_big_files
 remove_block 1

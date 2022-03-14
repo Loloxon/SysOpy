@@ -1,13 +1,12 @@
 cc = gcc
 flags = -Wall -O0
 
-all: static shared
+all: static shared clean
 
 static:
 	$(cc) $(flags) -c ../zad1/library.c
 	ar rcs liblibrary.a library.o
 	$(cc) $(flags) -o main ../zad2/main.c liblibrary.a
-	./main `cat ../zad2/tests/arg_1.txt`
 
 shared:
 	$(cc) $(flags) -c -fPIC ../zad1/library.c
@@ -17,9 +16,10 @@ shared:
 clean:
 	rm -f *.o *.so *.a main *.txt
 
-test_static:
+test_static: clean
 	make clean
 	make static
+	./main `cat ../zad2/tests/arg_3.txt`
 
 test_shared:
 	make clean
