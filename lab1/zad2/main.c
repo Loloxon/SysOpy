@@ -5,6 +5,22 @@
 
 #include "sys/times.h"
 #include "unistd.h"
+#include "time.h"
+
+clock_t timer_start, timer_end;
+struct tms timer_start_tms, timer_end_tms;
+
+void timerStart(){
+    timer_start = times(&timer_start_tms);
+}
+void printTimes(char* command){
+    timer_end = times(&timer_end_tms);
+    printf("%s %.3ld %.3ld %.3ld\n",
+           command,
+           timer_end-timer_start,
+           timer_end_tms.tms_cutime-timer_start_tms.tms_cutime,
+           timer_end_tms.tms_cutime-timer_start_tms.tms_cutime);
+}
 
 int main(int argc, char** argv){
     blockTable* table = NULL;
@@ -13,7 +29,9 @@ int main(int argc, char** argv){
             i++;
 //            printf("create: %s\n", argv[i]);
             if(table == NULL) {
+                timerStart();
                 table = createPointersTable(atoi(argv[i]));
+                printTimes("create");
             }
             else{
                 printf("Table already created!\n");
@@ -37,11 +55,13 @@ int main(int argc, char** argv){
                     paths[k] = calloc(strlen(argv[i+k]),sizeof(char));
                     strcpy(paths[k],argv[i+k]);
                 }
-                int index = wc(paths, ctr, table);
+                timerStart();
+                wc(paths, ctr, table);
+                printTimes("wc");
                 for(int k=0;k<ctr;k++)
                     free(paths[k]);
                 free(paths);
-                printf("%d:\n%s\n",index, table->info[index]);
+//                printf("%d:\n%s\n",index, table->info[index]);
             }
         }
         if(strcmp(argv[i],"remove_block")==0){
@@ -52,7 +72,9 @@ int main(int argc, char** argv){
                 exit(2);
             }
             else{
+                timerStart();
                 removeBlock(atoi(argv[i]),table);
+                printTimes("remove");
             }
         }
     }
