@@ -13,13 +13,17 @@ struct tms timer_start_tms, timer_end_tms;
 void timerStart(){
     timer_start = times(&timer_start_tms);
 }
+double timeDiff(clock_t s, clock_t e){
+    return (double)(e-s)/ (double)sysconf(_SC_CLK_TCK);
+}
+
 void printTimes(char* command){
     timer_end = times(&timer_end_tms);
-    printf("%s %.3ld %.3ld %.3ld\n",
+    printf("%6s: %.3f %.3f %.3f\n",
            command,
-           timer_end-timer_start,
-           timer_end_tms.tms_cutime-timer_start_tms.tms_cutime,
-           timer_end_tms.tms_cutime-timer_start_tms.tms_cutime);
+           timeDiff(timer_start,timer_end),
+           timeDiff(timer_start_tms.tms_cutime,timer_end_tms.tms_cutime),
+           timeDiff(timer_start_tms.tms_cstime,timer_end_tms.tms_cstime));
 }
 
 int main(int argc, char** argv){

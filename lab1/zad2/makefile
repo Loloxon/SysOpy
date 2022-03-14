@@ -14,14 +14,16 @@ shared:
 	$(cc) -o main main.c -L. library.so -Wl,-rpath=`pwd`
 
 clean:
-	rm -f *.o *.so *.a main *.txt
+	rm -f *.o *.so *.a main
 
-test_static: clean
+test_static:
 	make clean
 	make static
-	./main `cat ../zad2/tests/arg_3.txt`
+	./main `cat ../zad2/tests/arg_1_time.txt` >> ../zad2/raport2.txt
 
 test_shared:
 	make clean
 	make shared
+	./main `cat ../zad2/tests/arg_3.txt` >> ../zad2/raport2.txt
+
 
