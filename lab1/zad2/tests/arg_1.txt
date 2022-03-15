@@ -1,5 +1,5 @@
 create_table 2
-wc_files ../zad2/tests/small_1 ../zad2/tests/small_2 ../zad2/tests/small_3
-wc_files ../zad2/tests/small_1 ../zad2/tests/small_2
+wc_files ../zad2/tests/small_1
+wc_files ../zad2/tests/small_2
 remove_block 0
 wc_files ../zad2/tests/small_1

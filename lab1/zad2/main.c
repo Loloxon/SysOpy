@@ -19,7 +19,7 @@ double timeDiff(clock_t s, clock_t e){
 
 void printTimes(char* command){
     timer_end = times(&timer_end_tms);
-    printf("%6s: %.3f %.3f %.3f\n",
+    printf("%6s: %.3fs %.3fs %.3fs\n",
            command,
            timeDiff(timer_start,timer_end),
            timeDiff(timer_start_tms.tms_cutime,timer_end_tms.tms_cutime),

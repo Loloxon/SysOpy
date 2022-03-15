@@ -16,14 +16,17 @@ shared:
 clean:
 	rm -f *.o *.so *.a main
 
-test_static:
-	make clean
-	make static
-	./main `cat ../zad2/tests/arg_1_time.txt` >> ../zad2/raport2.txt
+test_static: clean static testsReports
 
-test_shared:
-	make clean
-	make shared
+test_shared: clean shared testsReports
+
+testsReports:
+	@printf "small test:\n" > ../zad2/raport2.txt
+	./main `cat ../zad2/tests/arg_1.txt` >> ../zad2/raport2.txt
+	@printf "few small files:\n" >> ../zad2/raport2.txt
+	./main `cat ../zad2/tests/arg_2.txt` >> ../zad2/raport2.txt
+	@printf "some big files and deletes:\n" >> ../zad2/raport2.txt
 	./main `cat ../zad2/tests/arg_3.txt` >> ../zad2/raport2.txt
-
+	@printf "many big files:\n" >> ../zad2/raport2.txt
+	./main `cat ../zad2/tests/arg_4.txt` >> ../zad2/raport2.txt
 

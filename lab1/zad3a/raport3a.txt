@@ -1,0 +1,92 @@
+static:
+small test:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+few small files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+some big files and deletes:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+many big files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.540s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+shared:
+small test:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+few small files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+some big files and deletes:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+many big files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.520s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s

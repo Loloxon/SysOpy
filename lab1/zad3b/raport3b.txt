@@ -1,0 +1,554 @@
+static:
+O0:
+small test:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+few small files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+some big files and deletes:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+many big files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.550s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+O1:
+small test:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+few small files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+some big files and deletes:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+many big files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.540s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+O2:
+small test:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+few small files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+some big files and deletes:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.010s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+many big files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.530s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+O3:
+small test:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+few small files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+some big files and deletes:
+create: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.010s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+many big files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.540s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+Ofast:
+small test:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+few small files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+some big files and deletes:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+many big files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.570s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+Os:
+small test:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+few small files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+some big files and deletes:
+create: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+many big files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.540s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+shared:
+O0:
+small test:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+few small files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+some big files and deletes:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.010s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+many big files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.530s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+O1:
+small test:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+few small files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+some big files and deletes:
+create: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.010s
+many big files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.530s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+O2:
+small test:
+create: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+few small files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+some big files and deletes:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+many big files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.600s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+O3:
+small test:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+few small files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+some big files and deletes:
+create: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.010s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+many big files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.600s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+Ofast:
+small test:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+few small files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+some big files and deletes:
+create: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+many big files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.550s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+Os:
+small test:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+few small files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+some big files and deletes:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+    wc: 0.000s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+many big files:
+create: 0.000s 0.000s 0.000s
+    wc: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.000s 0.000s
+    wc: 0.530s 0.000s 0.000s
+remove: 0.000s 0.000s 0.000s
+    wc: 0.010s 0.010s 0.000s
