@@ -1,0 +1,4 @@
+Pomiar czasow lib small:
+rzeczywisty: 0.000s użytkownika: 0.000s systemowy: 0.000s
+Pomiar czasow lib big:
+rzeczywisty: 0.030s użytkownika: 0.000s systemowy: 0.000s
