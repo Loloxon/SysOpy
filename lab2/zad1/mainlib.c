@@ -1,4 +1,3 @@
-//#include <cctype>
 #include "stdio.h"
 #include "string.h"
 #include "stdlib.h"
@@ -6,7 +5,6 @@
 
 #include "sys/times.h"
 #include "unistd.h"
-#include "time.h"
 
 clock_t timer_start, timer_end;
 struct tms timer_start_tms, timer_end_tms;
@@ -28,7 +26,6 @@ void printTimes(){
 
 
 int main(int argc, char** argv){
-//    printf("arguments no.: %d\n", argc);
     if(argc>3){
         printf("Too many arguments\n");
     }
@@ -36,21 +33,16 @@ int main(int argc, char** argv){
         printf("Cant get just one file >:(\n");
     }
     else{
-        char* pathOut = NULL;
-        char* pathIn = NULL;
+        char* pathOut = calloc(156, 1);
+        char* pathIn = calloc(256, 1);
         if(argc<3){
             printf("Gimme name of files bruddah!\n");
-            char tmp[256];
-            scanf("%s256",tmp);
-            pathIn = tmp;
-            scanf("%s256",tmp);
-            pathOut = tmp;
-//            printf("%s;%s\n",pathOut,pathIn);
+            scanf("%s256",pathIn);
+            scanf("%s256",pathOut);
         }
         else{
-            pathOut = argv[1];
-            pathIn = argv[2];
-//            printf("%s;%s\n",pathOut,pathIn);
+            strcpy(pathOut,argv[1]);
+            strcpy(pathIn,argv[2]);
         }
         timerStart();
         FILE* fOut = fopen(pathOut,"r");
@@ -62,17 +54,15 @@ int main(int argc, char** argv){
         fread(content, 1, size, fOut);
         fclose(fOut);
 
-        char newContent[sizeof(content)];
+        char* newContent = calloc(size,1);
+
         int lineP = 0;
         bool toDelete = true;
         int p=0;
         for(int i=0;i<size+1;i++){
             if(content[i]!='\n' && content[i]!=' ' && content[i]!='\t'){
                 toDelete = false;
-//                printf("%d\n",i);
             }
-//            if(toDelete)
-//                printf("I: %d\n",i);
             if(!toDelete) {
                 for (;lineP <= i; lineP++) {
                     newContent[p]=content[lineP];
@@ -92,6 +82,9 @@ int main(int argc, char** argv){
         fwrite(newContent, 1, p-1, fIn);
         fclose(fIn);
         printTimes();
+        free(pathIn);
+        free(pathOut);
+        free(newContent);
     }
     return 0;
 }
