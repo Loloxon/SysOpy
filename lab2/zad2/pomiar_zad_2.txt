@@ -1,0 +1,18 @@
+		Lib small:
+The "c" char exists 50 times in file
+The "c" char exists in 17 lines in file
+Czas rzeczywisty: 0.000s
+		Lib big:
+The "c" char exists 192960 times in file
+The "c" char exists in 60780 lines in file
+Czas rzeczywisty: 0.020s
+________________________
+		Sys small:
+The "c" char exists 50 times in file
+The "c" char exists in 17 lines in file
+Czas rzeczywisty: 0.000s
+		Sys big:
+The "c" char exists 192960 times in file
+The "c" char exists in 60780 lines in file
+Czas rzeczywisty: 0.030s
+________________________
