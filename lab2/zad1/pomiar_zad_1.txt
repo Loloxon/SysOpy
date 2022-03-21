@@ -1,10 +1,10 @@
 Pomiar czasow lib small:
-rzeczywisty: 0.000s użytkownika: 0.000s systemowy: 0.000s
+Czas rzeczywisty: 0.010s
 Pomiar czasow lib big:
-rzeczywisty: 0.050s użytkownika: 0.000s systemowy: 0.000s
+Czas rzeczywisty: 0.060s
 ________________________
 Pomiar czasow sys small:
-rzeczywisty: 0.000s użytkownika: 0.000s systemowy: 0.000s
+Czas rzeczywisty: 0.000s
 Pomiar czasow sys big:
-rzeczywisty: 0.040s użytkownika: 0.000s systemowy: 0.000s
+Czas rzeczywisty: 0.040s
 ________________________

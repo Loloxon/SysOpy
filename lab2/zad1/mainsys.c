@@ -3,7 +3,6 @@
 #include "stdlib.h"
 #include <stdbool.h>
 #include <fcntl.h>
-#include "sys/stat.h"
 
 #include "sys/times.h"
 #include "unistd.h"
@@ -20,10 +19,8 @@ double timeDiff(clock_t s, clock_t e){
 
 void printTimes(){
     timer_end = times(&timer_end_tms);
-    printf("rzeczywisty: %.3fs użytkownika: %.3fs systemowy: %.3fs\n",
-           timeDiff(timer_start,timer_end),
-           timeDiff(timer_start_tms.tms_cutime,timer_end_tms.tms_cutime),
-           timeDiff(timer_start_tms.tms_cstime,timer_end_tms.tms_cstime));
+    printf("Czas rzeczywisty: %.3fs\n",
+           timeDiff(timer_start,timer_end));
 }
 
 
@@ -48,9 +45,7 @@ int main(int argc, char** argv){
         }
         timerStart();
         int dOut = open(pathOut, O_RDONLY);
-        struct stat st;
-        stat(pathOut, &st);
-        off_t size = st.st_size;
+        long size = lseek(dOut, 0, SEEK_END);
         char content[size];
         read(dOut, content, size);
         close(dOut);

@@ -18,10 +18,8 @@ double timeDiff(clock_t s, clock_t e){
 
 void printTimes(){
     timer_end = times(&timer_end_tms);
-    printf("rzeczywisty: %.3fs użytkownika: %.3fs systemowy: %.3fs\n",
-           timeDiff(timer_start,timer_end),
-           timeDiff(timer_start_tms.tms_cutime,timer_end_tms.tms_cutime),
-           timeDiff(timer_start_tms.tms_cstime,timer_end_tms.tms_cstime));
+    printf("Czas rzeczywisty: %.3fs\n",
+           timeDiff(timer_start,timer_end));
 }
 
 
