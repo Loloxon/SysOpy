@@ -1,6 +1,10 @@
 cc = gcc -Wall
 
-all: clean main_lib main_sys
+all:
+	@printf "" > ../zad1/pomiar_zad_1.txt
+	make clean
+	make main_lib
+	make main_sys
 
 main_lib:
 	$(cc) mainlib.c -o mainlib.o
@@ -20,4 +24,3 @@ main_sys:
 
 clean:
 	rm -f *.o
-	@printf "" > ../zad2/pomiar_zad_2.txt
