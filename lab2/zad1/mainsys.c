@@ -46,6 +46,7 @@ int main(int argc, char** argv){
         timerStart();
         int dOut = open(pathOut, O_RDONLY);
         long size = lseek(dOut, 0, SEEK_END);
+        lseek(dOut, 0, SEEK_SET);
         char content[size];
         read(dOut, content, size);
         close(dOut);

@@ -30,11 +30,10 @@ int main(int argc, char** argv){
     else if(argc<3){
         printf("You didnt give enough!!!\n");
     }
-    else{       //TODO: zliczanie wszystkiego, poprawnosc wejscia, ew funkcja pomocnicza
-        char* path = calloc(156, 1);
-        char* znak = calloc(1,1);
+    else{
+        char znak = argv[1][0];
+        char* path = calloc(256, 1);
         strcpy(path,argv[2]);
-        strcpy(znak,argv[1]);
         timerStart();
         FILE* fOut = fopen(path,"r");
         fseek(fOut, 0, SEEK_END);
@@ -44,26 +43,23 @@ int main(int argc, char** argv){
         char content[size];
         fread(content, 1, size, fOut);
         fclose(fOut);
-        int lineP = 0;
-        bool toDelete = true;
-        int p=0;
+        bool exists = false;
+        long counter1=0;
+        long counter2=0;
         for(int i=0;i<size+1;i++){
-            if(content[i]!='\n' && content[i]!=' ' && content[i]!='\t'){
-                toDelete = false;
+            if(content[i]==znak){
+                counter1++;
             }
-            if(!toDelete) {
-                for (;lineP <= i; lineP++) {
-                    p+=1;
-                }
-                toDelete = true;
+            if(content[i]==znak){
+                exists = true;
             }
-            if(content[i]=='\n') {
-                if(p==0)
-                    lineP=i+1;
-                else
-                    lineP = i;
+            if(content[i] == '\n' && exists){
+                counter2++;
+                exists = false;
             }
         }
+        printf("The \"%c\" char exists %ld times in file\n",znak,counter1);
+        printf("The \"%c\" char exists in %ld lines in file\n",znak,counter2);
         printTimes();
         free(path);
     }
