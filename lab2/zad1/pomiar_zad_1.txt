@@ -1,7 +1,7 @@
 Pomiar czasow lib small:
-Czas rzeczywisty: 0.000s
+Czas rzeczywisty: 0.010s
 Pomiar czasow lib big:
-Czas rzeczywisty: 0.060s
+Czas rzeczywisty: 0.040s
 ________________________
 Pomiar czasow sys small:
 Czas rzeczywisty: 0.000s

@@ -1,0 +1,148 @@
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/pomiar_zad_3.txt
+Liczba dowiązań: 1
+Rodzaj pliku: zwykly plik
+Rozmiar w bajtach: 0
+Data ostatniego dostępu: 2022-03-22 00:58:03
+Data ostatniej modyfikacji: 2022-03-22 00:58:19
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/maindir.c
+Liczba dowiązań: 1
+Rodzaj pliku: zwykly plik
+Rozmiar w bajtach: 2640
+Data ostatniego dostępu: 2022-03-22 00:57:07
+Data ostatniej modyfikacji: 2022-03-22 00:57:06
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/makefile
+Liczba dowiązań: 1
+Rodzaj pliku: zwykly plik
+Rozmiar w bajtach: 263
+Data ostatniego dostępu: 2022-03-22 00:58:17
+Data ostatniej modyfikacji: 2022-03-22 00:58:16
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/maindir.o
+Liczba dowiązań: 1
+Rodzaj pliku: zwykly plik
+Rozmiar w bajtach: 17712
+Data ostatniego dostępu: 2022-03-22 00:58:19
+Data ostatniej modyfikacji: 2022-03-22 00:58:19
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test
+Liczba dowiązań: 5
+Rodzaj pliku: katalog
+Rozmiar w bajtach: 4096
+Data ostatniego dostępu: 2022-03-22 00:34:55
+Data ostatniej modyfikacji: 2022-03-22 00:34:52
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test/test5.txt
+Liczba dowiązań: 64768
+Rodzaj pliku: zwykly plik
+Rozmiar w bajtach: 1000
+Data ostatniego dostępu: 1970-01-01 02:08:16
+Data ostatniej modyfikacji: 2022-03-22 00:34:55
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test/test2
+Liczba dowiązań: 64768
+Rodzaj pliku: katalog
+Rozmiar w bajtach: 1000
+Data ostatniego dostępu: 1970-01-01 02:08:16
+Data ostatniej modyfikacji: 2022-03-22 00:34:55
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test/test2/test3.txt
+Liczba dowiązań: 64768
+Rodzaj pliku: zwykly plik
+Rozmiar w bajtach: 1000
+Data ostatniego dostępu: 1970-01-01 02:08:16
+Data ostatniej modyfikacji: 2022-03-22 00:08:16
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test/test2/test2.txt
+Liczba dowiązań: 64768
+Rodzaj pliku: zwykly plik
+Rozmiar w bajtach: 1000
+Data ostatniego dostępu: 1970-01-01 02:08:16
+Data ostatniej modyfikacji: 2022-03-22 00:08:16
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test/test2/test1
+Liczba dowiązań: 64768
+Rodzaj pliku: katalog
+Rozmiar w bajtach: 1000
+Data ostatniego dostępu: 1970-01-01 02:08:16
+Data ostatniej modyfikacji: 2022-03-22 00:08:16
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test/test2/test1/test2
+Liczba dowiązań: 64768
+Rodzaj pliku: katalog
+Rozmiar w bajtach: 1000
+Data ostatniego dostępu: 1970-01-01 02:08:16
+Data ostatniej modyfikacji: 2022-03-22 00:09:01
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test/test2/test1/test3
+Liczba dowiązań: 64768
+Rodzaj pliku: katalog
+Rozmiar w bajtach: 1000
+Data ostatniego dostępu: 1970-01-01 02:08:16
+Data ostatniej modyfikacji: 2022-03-22 00:09:01
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test/test2/test1/test1
+Liczba dowiązań: 64768
+Rodzaj pliku: katalog
+Rozmiar w bajtach: 1000
+Data ostatniego dostępu: 1970-01-01 02:08:16
+Data ostatniej modyfikacji: 2022-03-22 00:09:01
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test/test4.txt
+Liczba dowiązań: 64768
+Rodzaj pliku: zwykly plik
+Rozmiar w bajtach: 1000
+Data ostatniego dostępu: 1970-01-01 02:08:16
+Data ostatniej modyfikacji: 2022-03-22 00:34:55
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test/test3
+Liczba dowiązań: 64768
+Rodzaj pliku: katalog
+Rozmiar w bajtach: 1000
+Data ostatniego dostępu: 1970-01-01 02:08:16
+Data ostatniej modyfikacji: 2022-03-22 00:34:55
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test/test1
+Liczba dowiązań: 64768
+Rodzaj pliku: katalog
+Rozmiar w bajtach: 1000
+Data ostatniego dostępu: 1970-01-01 02:08:16
+Data ostatniej modyfikacji: 2022-03-22 00:34:55
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test/test1/test3.txt
+Liczba dowiązań: 64768
+Rodzaj pliku: zwykly plik
+Rozmiar w bajtach: 1000
+Data ostatniego dostępu: 1970-01-01 02:08:16
+Data ostatniej modyfikacji: 2022-03-22 00:34:40
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test/test1/test1.txt
+Liczba dowiązań: 64768
+Rodzaj pliku: zwykly plik
+Rozmiar w bajtach: 1000
+Data ostatniego dostępu: 1970-01-01 02:08:16
+Data ostatniej modyfikacji: 2022-03-22 00:34:40
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test/test1/test4.txt
+Liczba dowiązań: 64768
+Rodzaj pliku: zwykly plik
+Rozmiar w bajtach: 1000
+Data ostatniego dostępu: 1970-01-01 02:08:16
+Data ostatniej modyfikacji: 2022-03-22 00:34:40
+--------------------
+Ścieżka bezwzględna: /home/loloxon/Pulpit/SysOpy/lab2/zad3/test/test1/test2.txt
+Liczba dowiązań: 64768
+Rodzaj pliku: zwykly plik
+Rozmiar w bajtach: 1000
+Data ostatniego dostępu: 1970-01-01 02:08:16
+Data ostatniej modyfikacji: 2022-03-22 00:34:40
+--------------------
+ FIFO: 0
+ soket: 0
+ katalog: 8
+ zwykly_plik: 12
+ plik_blokowy: 0
+ plik_znakowy: 0
+ link_symboliczny: 0
+________________________
