@@ -1,0 +1,50 @@
+Done for 1 processes:
+Result: 3.200000
+Difference between result and pi: 0.058407
+Czas rzeczywisty: 0.000s
+
+Done for 2 processes:
+Result: 3.162353
+Difference between result and pi: 0.020760
+Czas rzeczywisty: 0.000s
+
+Done for 5 processes:
+Result: 3.144926
+Difference between result and pi: 0.003333
+Czas rzeczywisty: 0.000s
+
+Done for 10 processes:
+Result: 3.142426
+Difference between result and pi: 0.000833
+Czas rzeczywisty: 0.000s
+
+Done for 50 processes:
+Result: 3.141625
+Difference between result and pi: 0.000032
+Czas rzeczywisty: 0.000s
+
+Done for 100 processes:
+Result: 3.141599
+Difference between result and pi: 0.000006
+Czas rzeczywisty: 0.010s
+
+Done for 500 processes:
+Result: 3.141588
+Difference between result and pi: -0.000005
+Czas rzeczywisty: 0.030s
+
+Done for 1000 processes:
+Result: 3.141601
+Difference between result and pi: 0.000008
+Czas rzeczywisty: 0.070s
+
+Done for 5000 processes:
+Result: 3.141604
+Difference between result and pi: 0.000011
+Czas rzeczywisty: 0.270s
+
+Done for 20000 processes:
+Result: 3.141669
+Difference between result and pi: 0.000076
+Czas rzeczywisty: 1.100s
+
