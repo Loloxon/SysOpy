@@ -51,7 +51,7 @@ void go_inside(char* path, int depth, int id, char* text){
                 int n = strlen(dir->d_name);
                 if(n>4 && dir->d_name[n-4]=='.' && dir->d_name[n-3]=='t' && dir->d_name[n-2]=='x' && dir->d_name[n-1]=='t'){
                     if(check(newPath, text)){
-                        printf("Relative path: %s; process no: %d\n",newPath , getpid());
+                        printf("Process no: %d on relative path: %s\n",getpid(),newPath);
                     }
                 }
             }

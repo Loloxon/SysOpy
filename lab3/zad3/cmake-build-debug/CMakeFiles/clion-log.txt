@@ -1,0 +1,1 @@
+CMakeLists.txt not found in /home/loloxon/Pulpit/SysOpy/lab3/zad3 Select CMakeLists.txt
