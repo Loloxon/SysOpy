@@ -36,15 +36,15 @@ Czas rzeczywisty: 0.030s
 Done for 1000 processes:
 Result: 3.141601
 Difference between result and pi: 0.000008
-Czas rzeczywisty: 0.070s
+Czas rzeczywisty: 0.050s
 
 Done for 5000 processes:
 Result: 3.141604
 Difference between result and pi: 0.000011
-Czas rzeczywisty: 0.270s
+Czas rzeczywisty: 0.250s
 
 Done for 20000 processes:
 Result: 3.141669
 Difference between result and pi: 0.000076
-Czas rzeczywisty: 1.100s
+Czas rzeczywisty: 1.040s
 
