@@ -1,2 +1,2 @@
 # SysOpy, lab8
-<img src="8.png" style="zoom:100%;" />
+<img src="../img/8.png" style="zoom:100%;" />

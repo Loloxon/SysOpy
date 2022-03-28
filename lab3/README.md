@@ -1,2 +1,2 @@
 # SysOpy, lab3
-<img src="3.png" style="zoom:100%;" />
+<img src="../img/3.png" style="zoom:100%;" />
