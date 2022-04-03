@@ -29,19 +29,19 @@ int main(int argc, char** argv){
     switch(mode){ // 0-ignore, 1-handler, 2-mask, 3-pending
         case 0:
             raise(SIGUSR1);
-            printf("Ignored in child!\n");
+            printf("Ignored :| (in child)\n");
             break;
         case 1:
-            printf("No handler allowed in child!!!\n");
+            printf("No handler allowed in child!!! (read the exercise more carefully next time >:( )\n");
             break;
         case 2:
             raise(SIGUSR1);
-            printf("Masked in child!\n");
+            printf("Masked xO (in child)\n");
             break;
         case 3:
             ;sigset_t curr_sigs;
             sigpending(&curr_sigs);
-            printf("Pending... (in %s)\n", sigismember(&curr_sigs, SIGUSR1)?"parent":"child");
+            printf("Pending... (in parent? %s)\n", sigismember(&curr_sigs, SIGUSR1)?"yes":"no");
             break;
         default:
             printf("Invalid command!\n");

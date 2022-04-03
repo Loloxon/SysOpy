@@ -1,0 +1,44 @@
+_____________________________________
+----> For: fork. Command: ignore.
+Ignored :|
+_____________________________________
+----> For: fork. Command: ignore.
+Ignored :|
+Ignored :| (in child)
+-> Child command: ignore
+Ignored :| (in child)
+_____________________________________
+----> For: fork. Command: handler.
+Handled!
+_____________________________________
+----> For: fork. Command: handler.
+Handled!
+Handled!
+-> Child command: handler
+No handler allowed in child!!! (read the exercise more carefully next time >:( )
+_____________________________________
+----> For: fork. Command: mask.
+Masked xO
+_____________________________________
+----> For: fork. Command: mask.
+Masked xO
+Masked xO (in child)
+-> Child command: mask
+Masked xO (in child)
+_____________________________________
+----> For: fork. Command: pending.
+Pending... (in parent? yes)
+_____________________________________
+----> For: fork. Command: pending.
+Pending... (in parent? yes)
+Pending... (in child? no)
+-> Child command: pending
+Pending... (in parent? yes)
+
+
+W przypadku uzywania forka zarowno ignorowanie, chwytanie jak i maskowanie jest dziedziczone przez potomka,
+  ale sygnały oczekujące nie są dziedziczone przez potomka
+
+W przypadku uzywania exec'a ignorowanie, chwytanie, maskowanie jak i sygnaly oczekujące
+  są dziedziczone przez potomka
+
