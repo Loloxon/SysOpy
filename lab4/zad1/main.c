@@ -1,4 +1,3 @@
-#include "../zad1/library.h"
 #include "stdio.h"
 #include "string.h"
 #include "stdlib.h"
@@ -7,81 +6,77 @@
 #include "unistd.h"
 #include "time.h"
 
-clock_t timer_start, timer_end;
-struct tms timer_start_tms, timer_end_tms;
+#include "signal.h"
 
-void timerStart(){
-    timer_start = times(&timer_start_tms);
-}
-double timeDiff(clock_t s, clock_t e){
-    return (double)(e-s)/ (double)sysconf(_SC_CLK_TCK);
+int checkMode(char* command){
+    if(!strcmp(command,"ignore")){
+        return 0;
+    }
+    if(!strcmp(command,"handler")){
+        return 1;
+    }
+    if(!strcmp(command,"mask")){
+        return 2;
+    }
+    if(!strcmp(command,"pending")){
+        return 3;
+    }
+    return -1;
 }
 
-void printTimes(char* command){
-    timer_end = times(&timer_end_tms);
-    printf("%6s: %.3fs %.3fs %.3fs\n",
-           command,
-           timeDiff(timer_start,timer_end),
-           timeDiff(timer_start_tms.tms_cutime,timer_end_tms.tms_cutime),
-           timeDiff(timer_start_tms.tms_cstime,timer_end_tms.tms_cstime));
+void handler(int sign){
+    printf("Handled!\n");
 }
 
 int main(int argc, char** argv){
-    blockTable* table = NULL;
-    for(int i=1;i<argc;i++){
-        if(strcmp(argv[i],"create_table") == 0) {
-            i++;
-//            printf("create: %s\n", argv[i]);
-            if(table == NULL) {
-                timerStart();
-                table = createPointersTable(atoi(argv[i]));
-                printTimes("create");
-            }
-            else{
-                printf("Table already created!\n");
-                exit(1);
-            }
-        }
-        if(strcmp(argv[i],"wc_files")==0){
-            i++;
-//            printf("wc tests: %s\n", argv[i]);
-            if(table == NULL){
-                printf("Table not created yet!\n");
-                exit(2);
-            }
-            else {
-                int ctr=0;
-                while(i+ctr<argc && argv[i+ctr][0]=='.'){
-                    ctr++;
-                }
-                char** paths = calloc(ctr, sizeof(char*));
-                for(int k=0;k<ctr;k++){
-                    paths[k] = calloc(strlen(argv[i+k]),sizeof(char));
-                    strcpy(paths[k],argv[i+k]);
-                }
-                timerStart();
-                wc(paths, ctr, table);
-                printTimes("wc");
-                for(int k=0;k<ctr;k++)
-                    free(paths[k]);
-                free(paths);
-//                printf("%d:\n%s\n",index, table->info[index]);
-            }
-        }
-        if(strcmp(argv[i],"remove_block")==0){
-            i++;
-//            printf("remove: %s\n", argv[i]);
-            if(table == NULL){
-                printf("Table not created yet!\n");
-                exit(2);
-            }
-            else{
-                timerStart();
-                removeBlock(atoi(argv[i]),table);
-                printTimes("remove");
-            }
-        }
+    if(argc!=3){
+        printf("Invalid no. of arguments!\n");
+        return 1;
     }
-    removeTable(table);
+    printf("----> For: %s. Command: %s.\n", argv[1], argv[2]);
+    int mode = checkMode(argv[2]);
+    switch(mode){ // 0-ignore, 1-handler, 2-mask, 3-pending
+        case 0:
+            signal(SIGUSR1, SIG_IGN);
+            raise(SIGUSR1);
+            break;
+        case 1:
+            signal(SIGUSR1, handler);
+            raise(SIGUSR1);
+            break;
+        case 2:
+//            ;sigset_t newmask;
+//            sigemptyset(&newmask);
+//            sigaddset(&newmask, SIGUSR1);
+//            if(sigprocmask(SIG_BLOCK,&newmask, NULL)<0)
+//                perror("Cant block signal!");
+//            break;
+        case 3:
+            ;sigset_t newmask;
+            sigemptyset(&newmask);
+            sigaddset(&newmask, SIGUSR1);
+            if(sigprocmask(SIG_BLOCK,&newmask, NULL)<0)
+                perror("Cant block signal!");
+            raise(SIGUSR1);
+            if(mode==3){
+                sigset_t curr_sigs;
+                sigpending(&curr_sigs);
+                printf("Pending... (in %s)\n", sigismember(&curr_sigs, SIGUSR1)?"parent":"child");
+            }
+            break;
+        default:
+            printf("Invalid command!\n");
+            return 1;
+    }
+    if(!strcmp(argv[1],"exec")){
+        execl("./child.o", "./child.o", argv[2], NULL);
+    }
+    else if(!strcmp(argv[1],"fork")){
+
+    }
+    else{
+        printf("Invalid mode!\n");
+        return 1;
+    }
     return 0;
 }
