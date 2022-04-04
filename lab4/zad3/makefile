@@ -1,10 +1,7 @@
 cc = gcc
-flags = -Wall -O0
+flags = -Wall
 
-all: make main clean
-
-main:
-	./catcher.o
+all: make clean
 
 make:
 	$(cc) $(flags) -o catcher.o catcher.c

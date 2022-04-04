@@ -1,3 +1,18 @@
-10000 1614 281
-10000 1431 271
-10000 1790 0
+Komenda "Kill":
+
+wysłane sygnały: 10000
+odebrane sygnały: 1500
+zwrócone sygnały: 273
+
+
+Komenda "Sigqueue":
+
+problemy z odbieraniem i zwracaniem sygnałów z powodu zaburzeń w kolejności odczytywanych sygnałów
+(catcher dostawał sygnał kończący zanim zdążył wysłać sygnaly z powrotem do sendera)
+
+
+Komenda "Sigrt":
+
+wysłane sygnały: 10000
+odebrane sygnały: 10000
+zwrócone sygnały: 10000
