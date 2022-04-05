@@ -1,0 +1,19 @@
+Komenda "Kill":
+
+wysłane sygnały: 100
+odebrane sygnały: 100
+zwrócone sygnały: 100
+
+
+Komenda "Sigqueue":
+
+wysłane sygnały: 100
+odebrane sygnały: 100
+zwrócone sygnały: 100
+
+
+Komenda "Sigrt":
+
+wysłane sygnały: 100
+odebrane sygnały: 100
+zwrócone sygnały: 100

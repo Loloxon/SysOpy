@@ -5,34 +5,46 @@
 #include "errno.h"
 #include "string.h"
 
-
 int recieved = 0;
 pid_t sender_id;
 
 int signal1 = SIGUSR1;
 int signal2 = SIGUSR2;
 
+char* mode;
+int finish = 0;
+
 void sig1_handler(int signo, siginfo_t *info, void *context){
-    if(signo==signal1 && info->si_code==SI_USER){
+    if(signo==signal1){
         printf("Got signal1! (%d) (catcher here)\n", recieved);
         recieved++;
         sender_id = info->si_pid;
+        if (!strcmp(mode, "kill") || !strcmp(mode, "sigrt")) {
+            printf("Sending signal1 from catcher\n");
+            kill(sender_id, signal1);
+        }
+        else if (!strcmp(mode, "sigqueue")) {
+            union sigval val;
+            val.sival_int = recieved;
+            printf("Sending signal1 from catcher\n");
+            sigqueue(sender_id, signal1, val);
+        }
         return;
     }
     return;
 }
 
 void sig2_handler(int signo, siginfo_t *info, void *context){
-    if(signo==signal2 && info->si_code==SI_USER){
+    if(signo==signal2){
         printf("Got signal2! (catcher here)\n");
-        sender_id = info->si_pid;
+        finish = 1;
         return;
     }
     return;
 }
 
 int main(int argc, char** argv){
-    char* mode = argv[1];
+    mode = argv[1];
     if(strcmp(mode,"kill") && strcmp(mode,"sigqueue") && strcmp(mode,"sigrt")){
         printf("Invalid mode!\n");
         return -1;
@@ -56,30 +68,27 @@ int main(int argc, char** argv){
     if(sigaction(signal2, &sig2, NULL)==-1){
         return -1;
     }
-    
+//    sigset_t mask1;
+//    sigemptyset(&mask1);
+//    sigaddset(&mask1, signal1);
+//    sigsuspend(&mask1);
+
     sigset_t mask;
     sigemptyset(&mask);
     sigaddset(&mask, signal2);
     sigsuspend(&mask);
 
+    while(!finish){
+
+    }
+
     if (!strcmp(mode, "kill") || !strcmp(mode, "sigrt")) {
-        for (int i = 0; i < recieved; i++) {
-            kill(sender_id, signal1);
-        }
         printf("Sending signal2 from catcher\n");
         kill(sender_id, signal2);
     }
     else if (!strcmp(mode, "sigqueue")) {
         union sigval val;
-        for (int i = 0; i < recieved; i++) {
-            union sigval val;
-            val.sival_int = i;
-            if (sigqueue(sender_id, signal1, val) == 0) {
-                printf("Signal sent!\n");
-            } else {
-                printf("ERROR: %d\n", errno);
-            }
-        }
+        val.sival_int = recieved;
         printf("Sending signal2 from catcher\n");
         sigqueue(sender_id, signal2, val);
     }

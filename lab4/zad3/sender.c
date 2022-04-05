@@ -7,7 +7,6 @@
 
 
 int recieved = 0;
-pid_t sender;
 
 int signal1 = SIGUSR1;
 int signal2 = SIGUSR2;
@@ -24,7 +23,6 @@ void sig1_handler(int signo, siginfo_t *info, void *context){
 void sig2_handler(int signo, siginfo_t *info, void *context){
     if(signo==signal2 && info->si_code==SI_USER){
         printf("Got signal2! (sender here)\n");
-        sender = info->si_pid;
         return;
     }
     return;
