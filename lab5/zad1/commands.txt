@@ -1,0 +1,5 @@
+skladnik1 = cat ./makefile | wc -l
+skladnik2 = ls | grep a | sort -n
+skladnik3 = ls | grep ma | sort -n
+
+skladnik1 | skladnik2 | skladnik3
