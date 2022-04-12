@@ -1,5 +1,5 @@
 cc = gcc
-flags = -Wall
+flags = -Wall -w
 
 all: main clean
 

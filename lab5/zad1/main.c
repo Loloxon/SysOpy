@@ -4,12 +4,11 @@
 
 #include "unistd.h"
 
-#include "wait.h"
-
 long size;
 int max_len;
+int cmd_len_max;
 
-void run_commands(char** commands, int len){
+void run_commands(char* commands[], int len){
     int pipes[len][2];
     for(int i=0;i<len;i++){
         if(pipe(pipes[i])<0){
@@ -17,57 +16,44 @@ void run_commands(char** commands, int len){
             exit(11);
         }
     }
+    printf("======\n");
     for(int i=0;i<len;i++) {
-        int pid = fork();
+        pid_t pid = fork();
         if (pid < 0) {
             printf("cant fork\n");
             exit(12);
         }
         if (pid == 0) {
-            if (i > 0) {
-                close(pipes[i-1][1]);
-//                printf("%d\n",
-                       dup2(pipes[i - 1][0], STDIN_FILENO)
-//                       )
-                       ;
+            if (i != 0) {
+                dup2(pipes[i - 1][0], STDIN_FILENO);
             }
-            if (i < len-1) {
-//                printf("%d\n",
-                       dup2(pipes[i][1], STDOUT_FILENO)
-//                       )
-                       ;
+            if (i != len - 1) {
+                dup2(pipes[i][1], STDOUT_FILENO);
             }
-            execvp(commands[i], commands);
+            for (int j = 0; j < len - 1; j++) {
+                close(pipes[j][0]);
+                close(pipes[j][1]);
+            }
+            char *args[cmd_len_max];
+            args[0] = strtok(commands[i], " ");
+            for (int r = 1; r < cmd_len_max; r++) {
+                args[r] = strtok(NULL, " ");
+            }
+
+            execvp(args[0], args);
             exit(EXIT_SUCCESS);
         }
-        close(pipes[i][1]);
-        waitpid(pid, NULL, 0);
-    }
-
-    char buff[256];
-    printf("test\n");
-    while(read(pipes[len-1][0],&buff[0], 100)>0){
-        printf("testt\n");
-        printf("%s\n",buff);
-    }
-    printf("%s\n",buff);
-    for(int i=0;i<len;i++){
-        close(pipes[i][0]);
-        close(pipes[i][1]);
     }
 }
 
-void parse_commands(int all_cmds,int commands_n, int orders[commands_n-all_cmds][10], char*** commands, int cmd_len_max){
-//    printf("all_cmds: %d, all: %d\n",all_cmds,commands_n);
-    for(int i=0;i<commands_n-all_cmds;i++) {
+void parse_commands(int all_cmds,int commands_n, int orders[commands_n-all_cmds][10], char*** commands){
+    for(int i=commands_n-all_cmds-1;i>=0;i--) {
         int j = 0;
         int ctr=0;
         char** parsed = calloc(all_cmds*cmd_len_max,1);
         while(orders[i][j]>-1){
-//            printf("skladnik: %d:\n", orders[i][j]);
             int k = 0;
             while(k<cmd_len_max && strcmp(commands[orders[i][j]][k]," ")){
-//                printf("%d: %s\n", k, commands[orders[i][j]][k]);
                 parsed[ctr] = calloc(max_len,1);
                 strcpy(parsed[ctr],commands[orders[i][j]][k]);
                 ctr++;
@@ -76,7 +62,6 @@ void parse_commands(int all_cmds,int commands_n, int orders[commands_n-all_cmds]
             j++;
         }
         run_commands(parsed, ctr);
-        printf("=====\n");
         free(parsed);
     }
 }
@@ -105,8 +90,9 @@ int main(int argc, char** argv){
     int commands_n = 0;
     char *c = buffor;
 
-    int curr_len = 0, all_cmds=0, cmd_len=1, cmd_len_max=0;
+    int curr_len = 0, all_cmds=0, cmd_len=1;
     max_len = 0;
+    cmd_len_max=0;
     while(*c!='\0'){
         if(*c=='|'){
             cmd_len+=1;
@@ -127,7 +113,6 @@ int main(int argc, char** argv){
             curr_len+=1;
         c++;
     }
-//    printf("commands number: %d, max len: %d, all_cmds: %d, cmd_len_max: %d\n",commands_n, max_len, all_cmds, cmd_len_max);
 
     char eq = '=';
     char stp = '|';
@@ -145,8 +130,6 @@ int main(int argc, char** argv){
             commands[i][j] = " ";
         }
     }
-//    printf("size: %ld\n",size);
-
     char* cmd=strtok(buffor,&stp);
     int row = -1;
     int col;
@@ -183,7 +166,7 @@ int main(int argc, char** argv){
         }
         cmd=strtok(NULL,&stp);
     }
-    parse_commands(all_cmds,commands_n, orders, commands, cmd_len_max);
+    parse_commands(all_cmds,commands_n, orders, commands);
     free(commands);
     free(buffor);
     return 0;
