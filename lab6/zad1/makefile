@@ -1,11 +1,10 @@
-cc = gcc
-flags = -Wall -w
+CC=gcc
+CFLAGS=-Wall -Wno-unused-variable
 
-all: main clean
-
-main:
-	$(cc) $(flags) main.c -o main.o
-	./main.o ./commands.txt
+all:
+	rm -f *.txt
+	$(CC) $(CFLAGS) server.c -o server
+	$(CC) $(CFLAGS) client.c -o client
 
 clean:
-	@ rm -f *.o *.so *.a main
+	rm -f client server *.o
