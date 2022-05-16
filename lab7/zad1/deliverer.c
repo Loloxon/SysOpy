@@ -1,16 +1,22 @@
 #include "common.h"
 
-int pid;
+int pid, sem_id, oven_id, table_id;
 
 struct place* oven;
 struct place* table;
 
 int current_pizza;
 
+void sigint_handler(){
+    shmdt(oven);
+    shmdt(table);
+    exit(EXIT_SUCCESS);
+}
+
 void print_timestamp(){
     char curr_time[15];
     get_current_time(curr_time);
-    printf("(PID: %d, time: %s) ", pid, curr_time);
+    printf("D: (PID: %d, time: %s)         ", pid, curr_time);
 }
 
 void print_pickup_pizza(int n, int k){
@@ -25,21 +31,18 @@ void print_deliver_pizza(int n){
 }
 
 
-// 1) Dostawca pobiera pizze ze stołu.
-//Wypisanie komunikatu: (pid timestamp) Pobieram pizze: n Liczba pizz na stole: k.
-//
-//2) Dojeżdża do klienta (4-5s).
-//
-//3) Dostarcza pizze.
-//Wypisanie komunikatu: (pid timestamp) Dostarczam pizze: n.
-//
-//4) Wraca (4-5s).
-
 void pickup_pizza(){
-    current_pizza = table->first;
+    sem_decrement(sem_id, EMPTY_TABLE_SEM);
+    sem_decrement(sem_id, USING_TABLE_SEM);
+
+    current_pizza = table->array[table->first];
     table->first = (table->first+1)%5;
     table->count-=1;
     print_pickup_pizza(current_pizza, table->count);
+
+    sem_increment(sem_id, INSIDE_TABLE_SEM);
+    sem_increment(sem_id, USING_TABLE_SEM);
+
 }
 
 void deliver_pizza(){
@@ -48,20 +51,20 @@ void deliver_pizza(){
 
 int main(){
     pid = getpid();
+    printf("Im deliverer no. %d\n", pid);
 
-//    int sem_id, oven_id, table_id;
-//    get_sem_and_shm_ids(&sem_id, &oven_id, &table_id);
-//
-//    oven = shmat(oven_id, NULL, 0);
-//    table = shmat(table_id, NULL, 0);
 
-    pickup_pizza();
+    get_sem_and_shm_ids(&sem_id, &oven_id, &table_id);
 
-    usleep(rand_number(4000000,5000000));
+    table = shmat(table_id, NULL, 0);
 
-    deliver_pizza();
+    while(1) {
+        pickup_pizza();
+        usleep(rand_number(4000000, 5000000));
 
-    usleep(rand_number(4000000,5000000));
+        deliver_pizza();
+        usleep(rand_number(4000000, 5000000));
+    }
 
     return 0;
 }

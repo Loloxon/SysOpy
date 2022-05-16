@@ -18,11 +18,28 @@
 #ifndef LAB7_COMMON_H
 #define LAB7_COMMON_H
 
+#define SEM_KEY_ID 1
+#define SHM_OVEN_KEY_ID 2
+#define SHM_TABLE_KEY_ID 3
+
+#define USING_OVEN_SEM 0
+#define USING_TABLE_SEM 1
+#define INSIDE_OVEN_SEM 2
+#define INSIDE_TABLE_SEM 3
+#define EMPTY_TABLE_SEM 4
+
 struct place {
     int array[5];
     int count;
     int first;
     int last;
+};
+
+union semun{
+    int val;
+    struct semid_ds *buf;
+    unsigned short *array;
+    struct seminfo *__buf;
 };
 
 void get_current_time(char *curr_time) {
@@ -35,7 +52,8 @@ void get_current_time(char *curr_time) {
 }
 
 unsigned int rand_number(unsigned int min, unsigned int max) {
-    return (unsigned int)((double)random()/RAND_MAX * (max - min + 1) + min);
+//    return (unsigned int)((double)random()/RAND_MAX * (max - min + 1) + min);
+    return rand()%(max-min)+min;
 }
 
 key_t get_key(int proj_id) {
@@ -60,5 +78,18 @@ void get_sem_and_shm_ids(int *sem_id, int *oven_shm_id, int *table_shm_id) {
 //        error("Table shmget error");
     }
 }
+
+void sem_decrement(int sem_id, int sem_num) {
+    struct sembuf buffer = {sem_num, -1, 0};
+    if (semop(sem_id, &buffer, 1) == -1) error("Semaphore decrement error");
+}
+
+
+void sem_increment(int sem_id, int sem_num) {
+    struct sembuf buffer = {sem_num, 1, 0};
+    if (semop(sem_id, &buffer, 1) == -1) error("Semaphore increment error");
+}
+
+//void sem_increment()
 
 #endif //LAB7_COMMON_H

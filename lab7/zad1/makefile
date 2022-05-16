@@ -1,29 +1,14 @@
 cc = gcc
 flags = -Wall -w
 
-all: main clean
+all: clean main
 
 main:
-	$(cc) $(flags) cook.c -o cook.o
-	$(cc) $(flags) deliverer.c -o deliver.o
-	$(cc) $(flags) main.c -o main.o
+	$(cc) $(flags) cook.c -o cook
+	$(cc) $(flags) deliverer.c -o deliver
+	$(cc) $(flags) main.c -o main
+	./main 5 5
 
 clean:
-	@ rm -f *.o *.so *.a
+	@ rm -f *.o *.so *.a cook deliver main
 
-#CC=gcc
-#CFLAGS=-Wall
-#COOK=cook
-#DELIVERER=deliverer
-#MAIN=main
-#VALGRIND=
-#
-#all: compile
-#
-#compile:
-#	$(CC) $(CFLAGS) $(COOK).c -o $(COOK)
-#	$(CC) $(CFLAGS) $(DELIVERER).c -o $(DELIVERER)
-#	$(CC) $(CFLAGS) $(MAIN).c -o $(MAIN)
-#
-#clean:
-#	rm -f *.o *.a *.so $(COOK) $(DELIVERER) $(MAIN)
