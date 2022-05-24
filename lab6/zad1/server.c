@@ -16,7 +16,6 @@ void logs(Message* message){
     FILE* f = fopen("raport.txt", "a+");
     fprintf(f, "%s %s from client %d\n====\n", message->text, get_data(), message->index);
     fclose(f);
-    return;
 }
 
 int get_free_index(){

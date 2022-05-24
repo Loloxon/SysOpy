@@ -4,7 +4,6 @@ static int client_queue_id;
 static int server_queue_id;
 static int client_index;
 static int client_key;
-static int connected_with_client = -1;
 
 int initialize_connection(key_t key){
     server_queue_id = create_msg_queue(SERVER_KEY_FILEPATH, PROJECT_ID, 0);

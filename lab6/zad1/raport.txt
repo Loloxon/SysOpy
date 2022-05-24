@@ -1,6 +1,15 @@
 LIST 
-2022-04-26 14:32:02 from 1
+2022-05-10 18:21:32 from client 1
+====
+LIST 
+2022-05-10 18:21:34 from client 0
+====
+2ALL hi 
+2022-05-10 18:21:42 from client 0
+====
+2ONE 1 hi 
+2022-05-10 18:21:47 from client 0
 ====
 STOP 
-2022-04-26 14:32:04 from 0
+2022-05-10 18:22:04 from client 2
 ====
