@@ -1,0 +1,5 @@
+Zdecydowanie bardziej wydajny jest sposób z podziałem na pionowe bloki.
+Było to do przewidzenia jako że program wykonuje wówczas znacznie mniej operacji.
+
+Zwiększenie liczby wątków również wpływa na czas obliczeń, jednak powyżej pewnego progu (8 wątków)
+wydajność zaczyna maleć.

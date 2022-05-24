@@ -1,0 +1,88 @@
+Times of program
+***		THREADS NUMBER:  1  	***
+MODE:  numbers
+    Thread time: 0.002155
+         Total time: 0.002922
+MODE:  blocks
+    Thread time: 0.001469
+         Total time: 0.002279
+***		THREADS NUMBER:  2  	***
+MODE:  numbers
+    Thread time: 0.002949
+    Thread time: 0.002923
+         Total time: 0.003348
+MODE:  blocks
+    Thread time: 0.000363
+    Thread time: 0.000530
+         Total time: 0.000805
+***		THREADS NUMBER:  4  	***
+MODE:  numbers
+    Thread time: 0.001020
+    Thread time: 0.001287
+    Thread time: 0.001845
+    Thread time: 0.001824
+         Total time: 0.002022
+MODE:  blocks
+    Thread time: 0.000153
+    Thread time: 0.000191
+    Thread time: 0.000226
+    Thread time: 0.000217
+         Total time: 0.000458
+***		THREADS NUMBER:  8  	***
+MODE:  numbers
+    Thread time: 0.001250
+    Thread time: 0.001423
+    Thread time: 0.001593
+    Thread time: 0.001694
+    Thread time: 0.001481
+    Thread time: 0.001720
+    Thread time: 0.001209
+    Thread time: 0.001242
+         Total time: 0.002866
+MODE:  blocks
+    Thread time: 0.000100
+    Thread time: 0.000150
+    Thread time: 0.000169
+    Thread time: 0.000161
+    Thread time: 0.000208
+    Thread time: 0.000233
+    Thread time: 0.000140
+    Thread time: 0.000136
+         Total time: 0.000577
+***		THREADS NUMBER:  16  	***
+MODE:  numbers
+    Thread time: 0.001135
+    Thread time: 0.001272
+    Thread time: 0.001381
+    Thread time: 0.001298
+    Thread time: 0.001379
+    Thread time: 0.001421
+    Thread time: 0.001455
+    Thread time: 0.000868
+    Thread time: 0.001449
+    Thread time: 0.001692
+    Thread time: 0.001423
+    Thread time: 0.001484
+    Thread time: 0.001422
+    Thread time: 0.000790
+    Thread time: 0.001439
+    Thread time: 0.001104
+         Total time: 0.003741
+MODE:  blocks
+    Thread time: 0.000119
+    Thread time: 0.000129
+    Thread time: 0.000138
+    Thread time: 0.000043
+    Thread time: 0.000125
+    Thread time: 0.000144
+    Thread time: 0.000065
+    Thread time: 0.000106
+    Thread time: 0.000120
+    Thread time: 0.000047
+    Thread time: 0.000066
+    Thread time: 0.000057
+    Thread time: 0.000058
+    Thread time: 0.000073
+    Thread time: 0.000075
+    Thread time: 0.000058
+         Total time: 0.001003
