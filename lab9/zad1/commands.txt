@@ -1,6 +1,0 @@
-skladnik1 = uniq | wc
-skladnik2 = ls | grep n | sort -n
-skladnik3 = cat /etc/passwd | wc -l
-
-skladnik3
-skladnik1 | skladnik2 | skladnik1
